@@ -1,0 +1,22 @@
+The program work as asked in the assignment.
+Here are certain things i did on my own.
+1. if any client download a file the name of the is orginal_file_name_clientid.extention
+ or orginal_file_name_clientid(for files without extension). this is done to distingues files between clients.
+2. server create a file called server_records.json and maintain the file info in it as well as maintains an internal data structure. 
+3. Two client cannot upload files with same name 
+4. if some error occurs while operation, a message stating Fail....(reason) is displayed.
+5. if a client Exits then all its records including files is deleted from server side.
+6. Port no is 5000 and ip address is home ip address(127.0.0.1) by default so no need of providing as argument 
+7. filename can be alphanumeric special charaters (except.-_) like @$ are not allowed.
+8. in the /insert command to insert a new line or tab user must add \n or \t inside the inverted comma 
+for example /invite abcd "this is first line\nthis is second line"
+this will append two lines in the file.
+
+
+Compile using
+g++ server.cpp -o server
+g++ client.cpp -o client
+
+Run the program as 
+./server
+./client
